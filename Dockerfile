@@ -8,11 +8,9 @@ ARG BUILDPLATFORM
 # Set defaults for TARGETPLATFORM to ensure it's available in scripts
 ENV TARGETPLATFORM=${TARGETPLATFORM:-linux/amd64}
 
-# Crée un fichier vide et les dossiers nécessaires avant la copie
-RUN touch pythagora-vs-code.vsix
-
 # Copy VSIX file first
-COPY pythagora-vs-code.vsix /var/init_data/pythagora-vs-code.vsix
+# COPY pythagora-vs-code.vsix /var/init_data/pythagora-vs-code.vsix
+# Ligne inutile...
 
 # Install all dependencies
 COPY cloud/setup-dependencies.sh /tmp/setup-dependencies.sh
