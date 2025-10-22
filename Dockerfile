@@ -9,7 +9,7 @@ ARG BUILDPLATFORM
 ENV TARGETPLATFORM=${TARGETPLATFORM:-linux/amd64}
 
 # Crée un fichier vide et les dossiers nécessaires avant la copie
-RUN mkdir -p /var/init_data && touch /var/init_data/pythagora-vs-code.vsix
+RUN touch pythagora-vs-code.vsix
 
 # Copy VSIX file first
 COPY pythagora-vs-code.vsix /var/init_data/pythagora-vs-code.vsix
